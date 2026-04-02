@@ -1,3 +1,5 @@
+{% extends "layout.html" %}
+{% block conteudo %}
 <!DOCTYPE html>
 <html lang="pt-br">
   <head>
@@ -17,10 +19,10 @@
     />
 
 <!-- Incluir os links para CSS (pode ter mais arquivos ou arquivos com nomes diferentes) -->
-    <link rel="stylesheet" href="./src/css/reset.css" />
-    <link rel="stylesheet" href="./src/css/variables.css" />
-    <link rel="stylesheet" href="./src/css/main.css" />
-    <link rel="stylesheet" href="./src/css/media.css" />
+    <link rel="stylesheet" href="static/src/css/reset.css" />
+    <link rel="stylesheet" href="static/src/css/variables.css" />
+    <link rel="stylesheet" href="static/src/css/main.css" />
+    <link rel="stylesheet" href="static/src/css/media.css" />
   </head>
   <body>
 
@@ -271,11 +273,4 @@
       </div>
     </section>
 
-<!-- Rodapé -->
-    <footer class="footer">
-      <p class="footer__text">
-        DevBurger © 2025. Todos os direitos reservados.
-      </p>
-    </footer>
-  </body>
-</html>
+{% endblock %}
