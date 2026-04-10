@@ -1,37 +1,33 @@
 {% extends "layout.html" %}
-{block css_adicional %}
-<link rel="stylesheet" href="static/src/css/reset.css">
+
+
+{% block css_adicional %}
+<link rel="stylesheet" href="static/src/css/produto.css">
+{% endblock %}
+
+{% block conteudo %}
 <div class="container">
   
-  <div class="image-box">
+  <div class="image-section">
     <img src="https://images.unsplash.com/photo-1550547660-d9450f859349" alt="Hambúrguer">
   </div>
 
   <div class="details">
-    <h1>Hambúrguer Artesanal 300g</h1>
+    <div class="title">Hambúrguer Artesanal Duplo 200g</div>
 
-    <div class="price">R$ 35,00</div>
-
-    <div class="info">
-      Código: #123456<br>
-      Marca: Burger House
+    <div class="description">
+      Delicioso hambúrguer artesanal com carne 100% bovina, queijo cheddar derretido,
+      bacon crocante e molho especial da casa. Acompanha pão brioche macio.
     </div>
 
-    <button class="btn">Adicionar</button>
+    <div class="price-old">R$ 39,90</div>
+    <div class="price">R$ 29,90</div>
 
-    <div class="quick-add">
-      <button>+1</button>
-      <button>+2</button>
-      <button>+5</button>
-      <button>+10</button>
-    </div>
+    <a href="#" class="button">Comprar Agora</a>
 
-    <div class="note">
-      * Preço pode variar conforme adicionais;<br>
-      * Sujeito à disponibilidade;<br>
-      * Imagem ilustrativa;
-    </div>
+    <!-- Simulação de falta de estoque -->
+    <div class="out">Produto indisponível no momento</div>
   </div>
 
 </div>
-
+{% endblock %}

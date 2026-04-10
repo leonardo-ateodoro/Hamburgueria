@@ -1,5 +1,15 @@
-{% extends 'layout.html" %}
-{block css_adicional
+{% extends "layout.html" %}
+
+{% block css_adicional %}
+<style>
+    h1 {
+        color: blue;
+    }
+</style>
+{% endblock %}
 
 
-    str 
+{% block conteudo %}
+<h1>Minha segunda página</h1>
+<img src="https://www.cacaushow.com.br/on/demandware.static/-/Sites-masterCatalog_CacauShow/default/dw784b7840/large/1002946_1.png">
+{% endblock %}

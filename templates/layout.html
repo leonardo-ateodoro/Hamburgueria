@@ -21,6 +21,8 @@
     <link rel="stylesheet" href="static/src/css/variables.css" />
     <link rel="stylesheet" href="static/src/css/main.css" />
     <link rel="stylesheet" href="static/src/css/media.css" />
+    {% block css_adicional %}
+    {% endblock %}
   </head>
   <body>
 
@@ -61,7 +63,9 @@
       </div>
     </header>
     
- Aqui é onde vai todo o conteudo do site { % endblock %}
+    {% block conteudo %}
+      Aqui é onde vai todo o conteudo do site
+    {% endblock %}
 
 <!-- Rodapé -->
     <footer class="footer">
