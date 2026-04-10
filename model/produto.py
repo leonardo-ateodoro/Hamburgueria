@@ -23,5 +23,19 @@ def rec_destq():
 
 
 def recuperar_produto(codigo:int):
+    conexao, cursor = criar_conexao()
+    cursor.execute("""
+                    select codigo,
+                        produto, 
+                        descricao,
+                        valor as preco,
+                        imagem as url_imagem,
+                        disponibilidade
+                   from itens
+                   where codigo = %s;
+                                     """, [codigo])
+    produto = cursor.fetchone()
+    conexao.close()
+    return produto
     
 
