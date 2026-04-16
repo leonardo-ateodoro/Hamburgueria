@@ -29,7 +29,7 @@
               alt="{{destaque.produto}}"
               class="category-item__img"
             />
-            <a href="" class="button button--small">EU QUERO</a>
+            <a href="/produto/{{destaque.codigo}}" class="button button--small">EU QUERO</a>
           </div>
           {% endfor %}
         </div>
@@ -60,7 +60,9 @@
               </p>
               <div class="card__footer">
                 <span class="card__price">{{ produto.preco }}</span>
+                <a href="/produto/{{destaque.codigo}}">
                 <button class="button button--small">Comprar</button>
+                </a>
               </div>
             </div>
           </article>
