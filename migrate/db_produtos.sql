@@ -2,7 +2,7 @@ create database if not exists produto;
 use produto;
 
 CREATE table IF NOT EXISTS itens(
-codigo int NOT NULL PRIMARY KEY,
+codigo int NOT NULL PRIMARY KEY auto_increment,
 produto varchar(50),
 descricao varchar(50),
 destaque bool,
