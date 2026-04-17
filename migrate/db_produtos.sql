@@ -10,3 +10,9 @@ preco float,
 url_imagem varchar(300),
 disponibilidade bool default 1
 );
+
+create table if not exists usuarios(
+	usuario varchar(20) primary key,
+    senha varchar(200) not null,
+    nome varchar(100) DEFAULT "ANONIMO" 
+    );

@@ -28,8 +28,8 @@ def recuperar_produto(codigo:int):
                     select codigo,
                         produto, 
                         descricao,
-                        valor as preco,
-                        imagem as url_imagem,
+                        preco,
+                        url_imagem,
                         disponibilidade
                    from itens
                    where codigo = %s;
