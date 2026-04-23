@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Carrinho Sidebar</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<button id="openCart">🛒 Abrir Carrinho</button>
+
+<div id="cartSidebar" class="cart-sidebar">
+  <div class="cart-header">
+    <h2>Carrinho</h2>
+    <button id="closeCart">✖</button>
+  </div>
+
+  <ul id="cartItems"></ul>
+
+  <div class="cart-footer">
+    <p>Total: R$ <span id="total">0.00</span></p>
+  </div>
+</div>
+
+<button onclick="addItem('Produto A', 29.90)">Adicionar Produto A</button>
+<button onclick="addItem('Produto B', 49.90)">Adicionar Produto B</button>
+
+<script src="script.js"></script>
+</body>
+</html>
