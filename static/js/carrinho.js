@@ -1,42 +1,38 @@
- async function mostrar_carrinho()
-{
-    const resposta = await fetch("http://10.110.134.2:8080/api/get/carrinho")
-    if (!resposta.ok) {
-        alert ("ERRO AO CARREGAR CARRINHO!")
-    
+async function mostrar_carrinho() {
+    try {
+        const resposta = await fetch("http://10.110.134.2:8080/api/get/carrinho");
 
-    }
-    else{
-        const dados = await resposta.json()
-        const carrinho = document.getElementById()
+        if (!resposta.ok) {
+            alert("ERRO AO CARREGAR CARRINHO!");
+        }
+        else{
+
+        
+
+        const carrinho = document.getElementById("carrinho")
         carrinho.innerHTML = "";
+      
         let total = 0;
 
-        for (let dado of dados){
+        for (let dado of dados) {
             total = total + dado.preco
+
             let linha = `
-            teste
-  <div id="cartSidebar" class="cart-sidebar">
-  <div class="cart-header">
-    <h2>Carrinho</h2>
-    <button id="closeCart">✖</button>
-  </div>
+                teste
+                <img src="${dado.imagem}" alt 
+                <li class="cart-item">
+                    <span>${dado.nome}</span>
+                    <span>R$ ${preco.toFixed(2)}</span>
+                </li>
+            `;
 
-  <ul id="cartItems"></ul>
+            lista.innerHTML += item;
+        }
 
-  <div class="cart-footer">
-    <p>Total: R$ <span id="total">z</span></p>
-  </div>
-</div>
+        totalElemento.textContent = total.toFixed(2);
 
-<button onclick="addItem('Produto A', 29.90)">Adicionar Produto A</button>
-<button onclick="addItem('Produto B', 49.90)">Adicionar Produto B</button>
-
-
-`
-carrinho.innerHTML += linha
-
-       }
-document.querySelector(".cart-item__price").textContent = "R$" + total
+    } catch (erro) {
+        console.error(erro);
+        alert("Erro ao conectar com o servidor");
     }
 }
