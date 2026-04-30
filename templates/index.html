@@ -29,7 +29,7 @@
               alt="{{destaque.produto}}"
               class="category-item__img"
             />
-            <a href="/produto/{{destaque.codigo}}" class="button button--small">EU QUERO</a>
+            <a href="" class="button button--small">EU QUERO</a>
           </div>
           {% endfor %}
         </div>
@@ -43,8 +43,6 @@
         <h2 class="products__title">Todas as Nossas Delicias</h2>
 
         <div class="products__grid">
-
-
 
           {% for produto in produtos: %}          
           <article class="card" id="lanche-1">
@@ -62,15 +60,14 @@
               </p>
               <div class="card__footer">
                 <span class="card__price">{{ produto.preco }}</span>
-                <a href="/produto/{{produto.codigo}}">
                 <button class="button button--small">Comprar</button>
-                </a>
               </div>
             </div>
           </article>
           {% endfor %}
 
-       
+        
+            
 
         <div style="text-align: center; margin-top: 40px">
           <a href="#menu" class="button button--primary"

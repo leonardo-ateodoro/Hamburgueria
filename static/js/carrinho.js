@@ -1,13 +1,12 @@
-async function mostrar_carrinho() {
+async function mostrarCarrinho() {
     try {
         const resposta = await fetch("http://10.110.134.2:8080/api/get/carrinho");
 
         if (!resposta.ok) {
-            alert("ERRO AO CARREGAR CARRINHO!");
+            alert("ERRO AO CARREGAR CARRINHO!")
         }
         else{
 
-        
 
         const carrinho = document.getElementById("carrinho")
         carrinho.innerHTML = "";
@@ -19,20 +18,25 @@ async function mostrar_carrinho() {
 
             let linha = `
                 teste
-                <img src="${dado.imagem}" alt 
-                <li class="cart-item">
-                    <span>${dado.nome}</span>
-                    <span>R$ ${preco.toFixed(2)}</span>
-                </li>
-            `;
+                <img src="${dado.imagem}" alt="Hamburguer" class = "cart-item__image">
+                
+                <div class = "cart-item__info">
+                
+                  <!--- TOPO (nome + REMOVER) -->
+                  <div class = "cart-item__top">
+                    <h3 class = "cart-item__name">${dado.nome}</h3>
+                    <button class = "remove-item-btn" title="Remover item">🗑</button>
+                  </div>
 
-            lista.innerHTML += item;
+                  <div class = "cart-item__bottom">
+                    <span class = "cart-item__price">R$ $ {dado.preco}</span>
+                  </div>
+                </div>
+                `
+                carrinho.innerHTML += linha
         }
-
-        totalElemento.textContent = total.toFixed(2);
-
-    } catch (erro) {
-        console.error(erro);
-        alert("Erro ao conectar com o servidor");
-    }
+        document.querySelector(".cart-item__price").textContent = "R$" + total
+     }
 }
+
+mostrarCarrinho();

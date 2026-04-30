@@ -3,7 +3,7 @@ from database.conexao import criar_conexao
 def recuperar_carrinho(usuario:str) -> list:
     conexao, cursor = criar_conexao()
     cursor.execute ("""
-SELECT carrinhos.cod_carrinho,
+                    SELECT carrinhos.cod_carrinho,
                     carrinhos.usuario,carrinhos.data,carrinhos.finalizado,
                     itens.produto,
                     itens_carrinho.quantidade,
